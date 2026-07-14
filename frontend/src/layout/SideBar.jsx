@@ -43,7 +43,7 @@ const SideBar = () => {
   const [active, setActive] = useState("Dashboard");
   const user = useAuthStore((state) => state.userInfo);
 
-  const [preview, setPreview] = useState(user?.image);
+  const [preview, setPreview] = useState(user?.image || DefaultImage);
 
   const handleImage = async (e) => {
     const file = e.target.files[0];
@@ -84,7 +84,7 @@ const SideBar = () => {
           />
 
           <img
-            src={preview ? preview : DefaultImage}
+            src={preview}
             alt="Profile"
             className="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover"
           />

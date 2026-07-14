@@ -133,6 +133,7 @@ async function updateImage(req, res) {
 
     const result = await cloudinary.uploader.upload(req.file.path, {
       resource_type: "image",
+      folder: "car-rental/users",
     });
 
     user.image = result.secure_url;
