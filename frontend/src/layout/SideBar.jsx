@@ -84,7 +84,7 @@ const SideBar = () => {
           />
 
           <img
-            src={preview}
+            src={preview ? preview : DefaultImage}
             alt="Profile"
             className="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover"
           />
