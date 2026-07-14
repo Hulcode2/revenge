@@ -102,7 +102,7 @@ const ManageBookings = () => {
                 <TableCell>
                   <div className="flex items-center gap-4">
                     <img
-                      src={booking?.car?.images[0]}
+                      src={booking?.car?.images?.[0]}
                       className="w-16 h-12 rounded-md object-cover"
                     />
 

@@ -37,9 +37,8 @@ async function setBooking(req, res) {
 
     const existingBooking = await Booking.findOne({
       car,
-
+      status: { $ne: "cancelled" },
       pickupDate: { $lt: returned },
-
       returnDate: { $gt: pickup },
     });
 
