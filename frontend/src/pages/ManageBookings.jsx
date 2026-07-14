@@ -23,7 +23,6 @@ const ManageBookings = () => {
         );
 
         setBookings(data.bookings);
-        console.log(data);
       } catch (err) {
         const errorMessage =
           err?.response?.data?.message || err.message || "Something went wrong";
@@ -38,7 +37,7 @@ const ManageBookings = () => {
         API_PATHS.BOOKINGS.DELETE(id),
       );
       toast.success("Cancel successfully");
-
+      console.log(data);
       setBookings((prev) =>
         prev.map((booking) =>
           booking._id === data.booking._id ? data.booking : booking,
