@@ -31,7 +31,7 @@ const ManageBookings = () => {
       }
     }
     getBooking();
-  }, [bookings]);
+  }, []);
   async function cancelBooking(id) {
     try {
       const { data } = await axiosInstance.delete(
